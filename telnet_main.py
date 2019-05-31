@@ -1,6 +1,5 @@
 import subprocess
 import telnetlib
-import logging
 import time
 
 def check_ip_ping(ip):
@@ -59,6 +58,10 @@ if __name__ == '__main__':
             if res:
                 print("<%s>网络连通..."%time_now())
                 break
+        for i in range(1,71):
+            time.sleep(1)
+            if i%5 == 0:
+                print("<%s>%d"%(time_now(), i))
         telnet_func(ip)
         for i in range(20):
             time.sleep(1)
