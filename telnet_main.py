@@ -53,7 +53,7 @@ if __name__ == '__main__':
     cmd_reboot = "reboot"
     ip = input("请输入ip：")
     while True:
-        for i in range(90):
+        for i in range(120):
             time.sleep(1)
             res = check_ip_ping(ip)
             if res:
